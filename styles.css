@@ -1,64 +1,93 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f2f5;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
-.auth-container {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.auth-container, .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 400px;
+}
+
+.auth-page, .profile-card {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
   text-align: center;
 }
 
-.auth-form h2 {
-  margin-bottom: 1.5rem;
+.auth-card {
+  display: none;
+}
+
+.auth-page.active, .auth-card.active {
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
   color: #333;
+  margin-bottom: 10px;
 }
 
-.auth-form input {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.auth-form button {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 1rem 0;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.auth-form button:hover {
-  background-color: #0056b3;
-}
-
-.auth-form p {
-  margin-top: 1rem;
+p {
   color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.auth-form a {
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-btn, .logout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover, .logout-btn:hover {
+  background: #0056b3;
+}
+
+.switch-link {
+  font-size: 14px;
+}
+
+.switch-link span {
   color: #007bff;
-  text-decoration: none;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.auth-form a:hover {
-  text-decoration: underline;
+.profile-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 5px 0;
 }
